@@ -35,8 +35,7 @@ router.post('/fileUpload', upload.single('file'), async (req, res) => {
         ///nodemailer
         await mailer(req.body.email, 'task', 'task successfull')
       })
-    // console.log(results)
-    res.status(200).json({ message: 'done', success: true });
+    res.status(200).json({ message: 'Images are being uploaded', success: true });
   }
   catch (err) {
     console.log(err);
